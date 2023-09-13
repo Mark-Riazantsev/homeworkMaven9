@@ -11,7 +11,7 @@ class ShopRepositoryTest {
         Product product = new Product(123, "Пельмени", 500);
         shopRepository.add(product);
 
-        shopRepository.remove(123);
+        //shopRepository.remove(123); - моя ошибка
 
         Assertions.assertThrows(NotFoundException.class, () -> {shopRepository.remove(777);});
     }
@@ -23,7 +23,7 @@ ShopRepository shopRepository = new ShopRepository();
 Product product = new Product(123, "Пельмени", 500);
 shopRepository.add(product);
 
-shopRepository.remove(777);
+        //shopRepository.remove(777); - моя ошибка
 
         Assertions.assertThrows(NotFoundException.class, () -> {shopRepository.remove(777);});
     }
